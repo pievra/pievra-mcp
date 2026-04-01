@@ -1,0 +1,29 @@
+{
+  "name": "@pievra/mcp-server",
+  "version": "0.1.0",
+  "description": "Agentic advertising protocol intelligence MCP server",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "pievra-mcp": "dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run",
+    "start": "node dist/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "better-sqlite3": "^12.8.0"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.13",
+    "@types/node": "^25.5.0",
+    "tsx": "^4.21.0",
+    "typescript": "^6.0.2",
+    "vitest": "^4.1.2"
+  }
+}
