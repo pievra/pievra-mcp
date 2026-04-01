@@ -1,7 +1,1643 @@
 {
-  "agents": [],
-  "metrics": [],
-  "deployments": [],
-  "articles": [],
-  "generated_at": "2026-04-01T00:00:00Z"
+  "agents": [
+    {
+      "name": "AdCP Protocol Server",
+      "icon": "📋",
+      "category": "infra",
+      "version": "v2.0",
+      "status": "live",
+      "featured": true,
+      "protocols": [
+        "AdCP",
+        "MCP"
+      ],
+      "steward": "AgenticAdvertising.org",
+      "description": "Official reference implementation of the Ad Context Protocol. Campaign negotiation, deal management, media buy/creative/signals/accounts protocols with Express server, JSON schemas and OpenAPI specs.",
+      "tags": [
+        "adcp",
+        "reference",
+        "protocol"
+      ],
+      "link": "https://github.com/adcontextprotocol/adcp"
+    },
+    {
+      "name": "Prebid Sales Agent",
+      "icon": "🏷️",
+      "category": "media",
+      "version": "v1.0",
+      "status": "live",
+      "featured": true,
+      "protocols": [
+        "AdCP",
+        "MCP",
+        "A2A"
+      ],
+      "steward": "Prebid.org",
+      "description": "Open-source publisher-side AI agent that automates programmatic ad sales. Exposes inventory via MCP, integrates with Google Ad Manager and Kevel. Deploy via Docker in 2 minutes.",
+      "tags": [
+        "prebid",
+        "publisher",
+        "sales",
+        "inventory"
+      ],
+      "link": "https://github.com/prebid/salesagent"
+    },
+    {
+      "name": "AdCP Client SDK (TypeScript)",
+      "icon": "📦",
+      "category": "infra",
+      "version": "v1.0",
+      "status": "live",
+      "featured": false,
+      "protocols": [
+        "AdCP"
+      ],
+      "steward": "AgenticAdvertising.org",
+      "description": "Official TypeScript/JavaScript SDK for building AdCP clients and servers. Handles protocol translation, negotiation payloads, and deal state management.",
+      "tags": [
+        "sdk",
+        "typescript",
+        "client"
+      ],
+      "link": "https://github.com/adcontextprotocol/adcp-client"
+    },
+    {
+      "name": "AdCP Client (Python)",
+      "icon": "🐍",
+      "category": "infra",
+      "version": "v0.1",
+      "status": "beta",
+      "featured": false,
+      "protocols": [
+        "AdCP"
+      ],
+      "steward": "AgenticAdvertising.org",
+      "description": "Python library for interacting with AdCP servers. Lightweight client for building buyer agents and campaign automation tools.",
+      "tags": [
+        "sdk",
+        "python",
+        "client"
+      ],
+      "link": "https://github.com/adcontextprotocol/adcp-client-python"
+    },
+    {
+      "name": "AdCP Signals Agent",
+      "icon": "📡",
+      "category": "data",
+      "version": "v1.0",
+      "status": "beta",
+      "featured": false,
+      "protocols": [
+        "AdCP",
+        "MCP"
+      ],
+      "steward": "AgenticAdvertising.org",
+      "description": "Reference implementation of an AdCP Signals Activation agent using MCP. Supports audience signals (demographic, behavioral) and contextual signals (content classification, intent).",
+      "tags": [
+        "signals",
+        "audience",
+        "contextual"
+      ],
+      "link": "https://github.com/adcontextprotocol/signals-agent"
+    },
+    {
+      "name": "AdCP Creative Agent",
+      "icon": "🎨",
+      "category": "creative",
+      "version": "v1.0",
+      "status": "beta",
+      "featured": false,
+      "protocols": [
+        "AdCP",
+        "MCP"
+      ],
+      "steward": "AgenticAdvertising.org",
+      "description": "Reference implementation of an AdCP creative agent. AI-powered creative generation and optimisation across formats, compliant with the AdCP creative protocol.",
+      "tags": [
+        "creative",
+        "generation",
+        "formats"
+      ],
+      "link": "https://github.com/adcontextprotocol/creative-agent"
+    },
+    {
+      "name": "IAB Buyer Agent",
+      "icon": "🛒",
+      "category": "media",
+      "version": "v1.0",
+      "status": "live",
+      "featured": true,
+      "protocols": [
+        "MCP",
+        "A2A"
+      ],
+      "steward": "IAB Tech Lab",
+      "description": "AI-powered media buying system built on CrewAI and IAB OpenDirect 2.1. Receives campaign briefs, allocates budget across channels, researches seller inventory, and books deals programmatically.",
+      "tags": [
+        "buyer",
+        "dsp",
+        "opendirect",
+        "crewai"
+      ],
+      "link": "https://github.com/IABTechLab/buyer-agent"
+    },
+    {
+      "name": "IAB Seller Agent",
+      "icon": "📰",
+      "category": "media",
+      "version": "v1.0",
+      "status": "live",
+      "featured": false,
+      "protocols": [
+        "MCP",
+        "A2A"
+      ],
+      "steward": "IAB Tech Lab",
+      "description": "AI-powered inventory management system for publishers and SSPs. Manages seller operations through Claude with 45+ MCP tools. Integrates with Google Ad Manager, FreeWheel, PubMatic, Index Exchange, and Magnite.",
+      "tags": [
+        "seller",
+        "publisher",
+        "ssp",
+        "inventory"
+      ],
+      "link": "https://github.com/IABTechLab/seller-agent"
+    },
+    {
+      "name": "IAB Agentic Direct",
+      "icon": "🔗",
+      "category": "infra",
+      "version": "v1.0",
+      "status": "live",
+      "featured": false,
+      "protocols": [
+        "MCP",
+        "A2A"
+      ],
+      "steward": "IAB Tech Lab",
+      "description": "Schema-driven A2A + MCP implementation for OpenDirect v2.1. Dual buyer/seller agents with auto-generated tools from OpenAPI spec. JSON-RPC 2.0 protocol for agent communication.",
+      "tags": [
+        "a2a",
+        "opendirect",
+        "schema",
+        "bridge"
+      ],
+      "link": "https://github.com/IABTechLab/agentic-direct"
+    },
+    {
+      "name": "Agentic RTB Framework (ARTF)",
+      "icon": "⚡",
+      "category": "infra",
+      "version": "v1.0",
+      "status": "live",
+      "featured": false,
+      "protocols": [
+        "ARTF",
+        "MCP",
+        "A2A"
+      ],
+      "steward": "IAB Tech Lab",
+      "description": "Go/Rust implementation of the ARTF v1.0 spec. Containerised architecture for agent-driven OpenRTB auctions,reduces bid request latency up to 80% by co-locating agents in the same data centre.",
+      "tags": [
+        "rtb",
+        "auction",
+        "latency",
+        "containers"
+      ],
+      "link": "https://github.com/IABTechLab/agentic-rtb-framework"
+    },
+    {
+      "name": "Agentic Audiences (UCP)",
+      "icon": "👥",
+      "category": "data",
+      "version": "v1.0",
+      "status": "live",
+      "featured": false,
+      "protocols": [
+        "UCP",
+        "MCP"
+      ],
+      "steward": "IAB Tech Lab / LiveRamp",
+      "description": "Open standard for exchanging privacy-safe audience signals between agents. 128-dimensional embeddings encode identity, contextual, and reinforcement signals. Donated by LiveRamp, governed by IAB Tech Lab.",
+      "tags": [
+        "audience",
+        "privacy",
+        "embeddings",
+        "identity"
+      ],
+      "link": "https://github.com/IABTechLab/agentic-audiences"
+    },
+    {
+      "name": "IAB Registry Agent Example",
+      "icon": "🔍",
+      "category": "infra",
+      "version": "v0.1",
+      "status": "beta",
+      "featured": false,
+      "protocols": [
+        "MCP"
+      ],
+      "steward": "IAB Tech Lab",
+      "description": "ADK TypeScript agent that interacts with the IAB Tech Lab Agent Registry MCP server. Browse entries and search for registered agents programmatically.",
+      "tags": [
+        "registry",
+        "discovery",
+        "adk"
+      ],
+      "link": "https://github.com/IABTechLab/registry-agent-example"
+    },
+    {
+      "name": "AAMP Hub",
+      "icon": "🏛️",
+      "category": "infra",
+      "version": "v1.0",
+      "status": "live",
+      "featured": false,
+      "protocols": [
+        "AdCP",
+        "MCP",
+        "A2A",
+        "ARTF",
+        "UCP"
+      ],
+      "steward": "IAB Tech Lab",
+      "description": "Central hub for Agentic Advertising Management Protocols (AAMP). Links to all IAB Tech Lab agentic repos: buyer agent, seller agent, ARTF, agentic audiences, registry, and agentic direct.",
+      "tags": [
+        "hub",
+        "aamp",
+        "central",
+        "governance"
+      ],
+      "link": "https://github.com/IABTechLab/AAMP"
+    },
+    {
+      "name": "Amazon Ads MCP",
+      "icon": "📊",
+      "category": "media",
+      "version": "v1.0",
+      "status": "live",
+      "featured": false,
+      "protocols": [
+        "MCP"
+      ],
+      "steward": "Amazon",
+      "description": "Standardised MCP access layer for Amazon Ads. Transforms complex multi-field API operations into conversational queries for campaign data, metrics, and reporting. Registered in the IAB Agent Registry.",
+      "tags": [
+        "amazon",
+        "ads",
+        "campaign",
+        "metrics"
+      ],
+      "link": "https://tools.iabtechlab.com/agent-registry"
+    },
+    {
+      "name": "PubMatic MCP",
+      "icon": "📡",
+      "category": "media",
+      "version": "v1.0",
+      "status": "live",
+      "featured": false,
+      "protocols": [
+        "MCP"
+      ],
+      "steward": "PubMatic",
+      "description": "Supply-side platform MCP server for agentic integration. Registered in the IAB Agent Registry with GPP ID verification.",
+      "tags": [
+        "ssp",
+        "pubmatic",
+        "supply"
+      ],
+      "link": "https://tools.iabtechlab.com/agent-registry"
+    },
+    {
+      "name": "Equativ MCP",
+      "icon": "📺",
+      "category": "media",
+      "version": "v1.0",
+      "status": "live",
+      "featured": false,
+      "protocols": [
+        "MCP"
+      ],
+      "steward": "Equativ",
+      "description": "Supply-side platform MCP server for agentic ad serving and inventory management. Registered in the IAB Agent Registry.",
+      "tags": [
+        "ssp",
+        "equativ",
+        "adserving"
+      ],
+      "link": "https://tools.iabtechlab.com/agent-registry"
+    },
+    {
+      "name": "Optable Audience Agent",
+      "icon": "🔒",
+      "category": "data",
+      "version": "v1.0",
+      "status": "live",
+      "featured": false,
+      "protocols": [
+        "MCP"
+      ],
+      "steward": "Optable",
+      "description": "Privacy-preserving audience infrastructure deployed to private networks. MCP agent for privacy-safe data collaboration and audience activation. Private deployment model.",
+      "tags": [
+        "privacy",
+        "audience",
+        "cleanroom"
+      ],
+      "link": "https://tools.iabtechlab.com/agent-registry"
+    },
+    {
+      "name": "Dstillery MCP",
+      "icon": "🧪",
+      "category": "data",
+      "version": "v1.0",
+      "status": "live",
+      "featured": false,
+      "protocols": [
+        "MCP"
+      ],
+      "steward": "Dstillery",
+      "description": "Data provider MCP server for audience intelligence and targeting capabilities. Registered in the IAB Agent Registry.",
+      "tags": [
+        "data",
+        "targeting",
+        "audience"
+      ],
+      "link": "https://tools.iabtechlab.com/agent-registry"
+    },
+    {
+      "name": "Burt Intelligence MCP",
+      "icon": "📈",
+      "category": "measurement",
+      "version": "v1.0",
+      "status": "live",
+      "featured": false,
+      "protocols": [
+        "MCP"
+      ],
+      "steward": "Burt Corp",
+      "description": "Analytics MCP server for agentic advertising measurement. Available in EU and US deployments for data residency compliance. Registered in the IAB Agent Registry.",
+      "tags": [
+        "analytics",
+        "measurement",
+        "eu"
+      ],
+      "link": "https://tools.iabtechlab.com/agent-registry"
+    },
+    {
+      "name": "HyperMindZ Campaign Orchestrator",
+      "icon": "🎯",
+      "category": "media",
+      "version": "v1.0",
+      "status": "live",
+      "featured": false,
+      "protocols": [
+        "MCP"
+      ],
+      "steward": "HyperMindZ",
+      "description": "Manages contractual and operational aspects of media buying. Order management system for campaign orchestration via MCP. Registered in the IAB Agent Registry.",
+      "tags": [
+        "oms",
+        "campaign",
+        "orchestration"
+      ],
+      "link": "https://tools.iabtechlab.com/agent-registry"
+    },
+    {
+      "name": "Mixpeek MCP Server",
+      "icon": "💾",
+      "category": "data",
+      "version": "v1.0",
+      "status": "live",
+      "featured": false,
+      "protocols": [
+        "MCP"
+      ],
+      "steward": "Mixpeek",
+      "description": "Data management platform MCP server for agentic advertising infrastructure. Registered in the IAB Agent Registry.",
+      "tags": [
+        "dmp",
+        "data",
+        "management"
+      ],
+      "link": "https://tools.iabtechlab.com/agent-registry"
+    },
+    {
+      "name": "IAB Agent Registry MCP",
+      "icon": "🗂️",
+      "category": "infra",
+      "version": "v1.0",
+      "status": "live",
+      "featured": false,
+      "protocols": [
+        "MCP"
+      ],
+      "steward": "IAB Tech Lab",
+      "description": "Meta-layer MCP server enabling programmatic discovery of all registered agents in the IAB Tech Lab Agent Registry. Query the registry from any MCP-compatible agent.",
+      "tags": [
+        "registry",
+        "discovery",
+        "meta"
+      ],
+      "link": "https://tools.iabtechlab.com/agent-registry"
+    },
+    {
+      "name": "A2A Protocol SDK",
+      "icon": "🤝",
+      "category": "infra",
+      "version": "v0.3",
+      "status": "live",
+      "featured": false,
+      "protocols": [
+        "A2A"
+      ],
+      "steward": "Linux Foundation / Google",
+      "description": "Official Agent2Agent protocol SDKs (Python, Go, JS, Java, .NET). Enables agents built on different frameworks to discover, negotiate, and collaborate securely. 22.8k GitHub stars.",
+      "tags": [
+        "a2a",
+        "sdk",
+        "interoperability",
+        "google"
+      ],
+      "link": "https://github.com/a2aproject/A2A"
+    },
+    {
+      "name": "IAB Deals MCP Server",
+      "icon": "🤝",
+      "category": "media",
+      "version": "v0.1",
+      "status": "beta",
+      "featured": false,
+      "protocols": [
+        "MCP",
+        "AdCP"
+      ],
+      "steward": "HyperMindZ.ai",
+      "description": "Reference implementation for IAB Tech Lab Agentic Task Force. MCP server for programmatic deal management and negotiation.",
+      "tags": [
+        "deals",
+        "negotiation",
+        "iab"
+      ],
+      "link": "https://github.com/Hypermindz-AI/iab-deals-mcp-server"
+    },
+    {
+      "name": "AdTech MCP Suite",
+      "icon": "🧰",
+      "category": "infra",
+      "version": "v1.0",
+      "status": "beta",
+      "featured": false,
+      "protocols": [
+        "MCP"
+      ],
+      "steward": "Community",
+      "description": "10 production-grade MCP servers for advertising technology. Multi-agent hierarchies with Random Forest, Isolation Forest, Thompson Sampling, and Markov Chains.",
+      "tags": [
+        "ml",
+        "multi-agent",
+        "suite"
+      ],
+      "link": "https://github.com/Samrajtheailyceum/adtech-mcp-suite"
+    },
+    {
+      "name": "Unified Ads MCP",
+      "icon": "📢",
+      "category": "media",
+      "version": "v1.0",
+      "status": "beta",
+      "featured": false,
+      "protocols": [
+        "MCP"
+      ],
+      "steward": "Promobase",
+      "description": "MCP server enabling AI assistants to manage advertising campaigns programmatically across Facebook Ads, Google Ads, and TikTok Ads from a single interface.",
+      "tags": [
+        "facebook",
+        "google",
+        "tiktok",
+        "campaign"
+      ],
+      "link": "https://github.com/promobase/unified-ads-mcp"
+    }
+  ],
+  "metrics": [
+    {
+      "protocol": "MCP",
+      "github_stars": 7685,
+      "npm_weekly_downloads": 44893137,
+      "pypi_weekly_downloads": 0,
+      "github_contributors": 340,
+      "github_commits_30d": 333,
+      "maturity": "Stable",
+      "momentum_30d_pct": null,
+      "date": "2026-04-01"
+    },
+    {
+      "protocol": "AdCP",
+      "github_stars": 199,
+      "npm_weekly_downloads": 1465,
+      "pypi_weekly_downloads": 0,
+      "github_contributors": 16,
+      "github_commits_30d": 410,
+      "maturity": "Beta",
+      "momentum_30d_pct": null,
+      "date": "2026-04-01"
+    },
+    {
+      "protocol": "A2A",
+      "github_stars": 22951,
+      "npm_weekly_downloads": 0,
+      "pypi_weekly_downloads": 0,
+      "github_contributors": 138,
+      "github_commits_30d": 31,
+      "maturity": "Stable",
+      "momentum_30d_pct": null,
+      "date": "2026-04-01"
+    },
+    {
+      "protocol": "ARTF",
+      "github_stars": 19,
+      "npm_weekly_downloads": 0,
+      "pypi_weekly_downloads": 0,
+      "github_contributors": 7,
+      "github_commits_30d": 0,
+      "maturity": "Final",
+      "momentum_30d_pct": null,
+      "date": "2026-04-01"
+    },
+    {
+      "protocol": "Agentic Audiences",
+      "github_stars": 29,
+      "npm_weekly_downloads": 0,
+      "pypi_weekly_downloads": 0,
+      "github_contributors": 3,
+      "github_commits_30d": 3,
+      "maturity": "Draft",
+      "momentum_30d_pct": null,
+      "date": "2026-04-01"
+    }
+  ],
+  "deployments": [
+    {
+      "company": "Yahoo",
+      "protocol": "AdCP",
+      "country": "US",
+      "region": "North America",
+      "category": "Media Trading",
+      "use_case": "Founding member, media buying agent",
+      "announced_date": "2025-10-15"
+    },
+    {
+      "company": "PubMatic",
+      "protocol": "AdCP",
+      "country": "US",
+      "region": "North America",
+      "category": "Media Trading",
+      "use_case": "AgenticOS platform, founding member",
+      "announced_date": "2025-10-15"
+    },
+    {
+      "company": "Optable",
+      "protocol": "AdCP",
+      "country": "CA",
+      "region": "North America",
+      "category": "Data & Identity",
+      "use_case": "Clean room + audience activation agent",
+      "announced_date": "2025-10-15"
+    },
+    {
+      "company": "Scope3",
+      "protocol": "AdCP",
+      "country": "US",
+      "region": "North America",
+      "category": "Measurement",
+      "use_case": "Carbon measurement agent",
+      "announced_date": "2025-10-15"
+    },
+    {
+      "company": "Swivel",
+      "protocol": "AdCP",
+      "country": "US",
+      "region": "North America",
+      "category": "Creative",
+      "use_case": "Creative optimization agent",
+      "announced_date": "2025-10-15"
+    },
+    {
+      "company": "Triton Digital",
+      "protocol": "AdCP",
+      "country": "US",
+      "region": "North America",
+      "category": "Media Trading",
+      "use_case": "Audio/podcast advertising agent",
+      "announced_date": "2025-10-15"
+    },
+    {
+      "company": "Magnite",
+      "protocol": "AdCP",
+      "country": "US",
+      "region": "North America",
+      "category": "Media Trading",
+      "use_case": "SSP seller agent",
+      "announced_date": "2025-10-15"
+    },
+    {
+      "company": "Kargo",
+      "protocol": "AdCP",
+      "country": "US",
+      "region": "North America",
+      "category": "Creative",
+      "use_case": "Rich media creative agent",
+      "announced_date": "2025-10-15"
+    },
+    {
+      "company": "LG Ad Solutions",
+      "protocol": "AdCP",
+      "country": "US",
+      "region": "North America",
+      "category": "Media Trading",
+      "use_case": "CTV advertising agent",
+      "announced_date": "2025-10-15"
+    },
+    {
+      "company": "Raptive",
+      "protocol": "AdCP",
+      "country": "US",
+      "region": "North America",
+      "category": "Media Trading",
+      "use_case": "Publisher monetization agent",
+      "announced_date": "2025-10-15"
+    },
+    {
+      "company": "The Weather Company",
+      "protocol": "AdCP",
+      "country": "US",
+      "region": "North America",
+      "category": "Data & Identity",
+      "use_case": "Contextual data agent",
+      "announced_date": "2025-10-15"
+    },
+    {
+      "company": "Samba TV",
+      "protocol": "AdCP",
+      "country": "US",
+      "region": "North America",
+      "category": "Measurement",
+      "use_case": "Cross-screen measurement agent",
+      "announced_date": "2025-10-15"
+    },
+    {
+      "company": "Butler/Till",
+      "protocol": "AdCP",
+      "country": "US",
+      "region": "North America",
+      "category": "Media Trading",
+      "use_case": "Agency media buying agent",
+      "announced_date": "2025-10-15"
+    },
+    {
+      "company": "Classify",
+      "protocol": "AdCP",
+      "country": "US",
+      "region": "North America",
+      "category": "Data & Identity",
+      "use_case": "Audience classification agent",
+      "announced_date": "2025-10-15"
+    },
+    {
+      "company": "Newton Research",
+      "protocol": "AdCP",
+      "country": "US",
+      "region": "North America",
+      "category": "Measurement",
+      "use_case": "Research and analytics agent",
+      "announced_date": "2025-10-15"
+    },
+    {
+      "company": "AccuWeather",
+      "protocol": "AdCP",
+      "country": "US",
+      "region": "North America",
+      "category": "Data & Identity",
+      "use_case": "Weather data and targeting agent",
+      "announced_date": "2025-10-15"
+    },
+    {
+      "company": "Anthropic",
+      "protocol": "MCP",
+      "country": "US",
+      "region": "North America",
+      "category": "Infrastructure",
+      "use_case": "Creator of MCP, Claude integration",
+      "announced_date": "2024-11-25"
+    },
+    {
+      "company": "OpenAI",
+      "protocol": "MCP",
+      "country": "US",
+      "region": "North America",
+      "category": "Infrastructure",
+      "use_case": "Agents SDK MCP support",
+      "announced_date": "2025-03-15"
+    },
+    {
+      "company": "Google DeepMind",
+      "protocol": "MCP",
+      "country": "US",
+      "region": "North America",
+      "category": "Infrastructure",
+      "use_case": "Gemini MCP integration",
+      "announced_date": "2025-03-15"
+    },
+    {
+      "company": "Block",
+      "protocol": "MCP",
+      "country": "US",
+      "region": "North America",
+      "category": "Infrastructure",
+      "use_case": "Co-founder Agentic AI Foundation",
+      "announced_date": "2025-12-01"
+    },
+    {
+      "company": "Google",
+      "protocol": "A2A",
+      "country": "US",
+      "region": "North America",
+      "category": "Infrastructure",
+      "use_case": "Creator of A2A protocol",
+      "announced_date": "2025-04-09"
+    },
+    {
+      "company": "Salesforce",
+      "protocol": "A2A",
+      "country": "US",
+      "region": "North America",
+      "category": "Infrastructure",
+      "use_case": "Agentforce A2A integration",
+      "announced_date": "2025-04-09"
+    },
+    {
+      "company": "SAP",
+      "protocol": "A2A",
+      "country": "DE",
+      "region": "Europe",
+      "category": "Infrastructure",
+      "use_case": "Enterprise agent interoperability",
+      "announced_date": "2025-04-09"
+    },
+    {
+      "company": "Atlassian",
+      "protocol": "A2A",
+      "country": "AU",
+      "region": "Asia Pacific",
+      "category": "Infrastructure",
+      "use_case": "Rovo agent A2A support",
+      "announced_date": "2025-06-01"
+    },
+    {
+      "company": "IAB Tech Lab",
+      "protocol": "ARTF",
+      "country": "US",
+      "region": "North America",
+      "category": "Infrastructure",
+      "use_case": "ARTF v1.0 reference implementation",
+      "announced_date": "2025-11-13"
+    },
+    {
+      "company": "LiveRamp",
+      "protocol": "Agentic Audiences",
+      "country": "US",
+      "region": "North America",
+      "category": "Data & Identity",
+      "use_case": "Original creator, donated to IAB Tech Lab",
+      "announced_date": "2025-11-03"
+    },
+    {
+      "company": "IAB Tech Lab",
+      "protocol": "Agentic Audiences",
+      "country": "US",
+      "region": "North America",
+      "category": "Infrastructure",
+      "use_case": "Steward, open-source governance",
+      "announced_date": "2025-11-03"
+    },
+    {
+      "company": "PubMatic",
+      "protocol": "AdCP",
+      "country": "FR",
+      "region": "Europe",
+      "category": "Media Trading",
+      "use_case": "First live agentic campaign in France via AgenticOS",
+      "announced_date": "2026-03-15"
+    },
+    {
+      "company": "Amnet/Dentsu",
+      "protocol": "AdCP",
+      "country": "FR",
+      "region": "Europe",
+      "category": "Media Trading",
+      "use_case": "Agency running first French agentic campaign",
+      "announced_date": "2026-03-15"
+    },
+    {
+      "company": "PubMatic",
+      "protocol": "MCP",
+      "country": "US",
+      "region": "North America",
+      "category": "Media Trading",
+      "use_case": "AgenticOS platform, MCP integration",
+      "announced_date": "2025-10-15"
+    },
+    {
+      "company": "PubMatic",
+      "protocol": "A2A",
+      "country": "US",
+      "region": "North America",
+      "category": "Media Trading",
+      "use_case": "AgenticOS platform, A2A integration",
+      "announced_date": "2025-10-15"
+    },
+    {
+      "company": "Yahoo",
+      "protocol": "MCP",
+      "country": "US",
+      "region": "North America",
+      "category": "Media Trading",
+      "use_case": "Founding member, MCP integration",
+      "announced_date": "2025-10-15"
+    },
+    {
+      "company": "Optable",
+      "protocol": "MCP",
+      "country": "CA",
+      "region": "North America",
+      "category": "Data & Identity",
+      "use_case": "Clean room + audience activation, MCP support",
+      "announced_date": "2025-10-15"
+    },
+    {
+      "company": "Google",
+      "protocol": "MCP",
+      "country": "US",
+      "region": "North America",
+      "category": "Infrastructure",
+      "use_case": "Gemini MCP integration (Google)",
+      "announced_date": "2025-03-15"
+    },
+    {
+      "company": "Equativ",
+      "protocol": "MCP",
+      "country": "FR",
+      "region": "Europe",
+      "category": "Media Trading",
+      "use_case": "MCP server for programmatic SSP operations",
+      "announced_date": "2025-12-01"
+    },
+    {
+      "company": "Amazon Ads",
+      "protocol": "MCP",
+      "country": "US",
+      "region": "North America",
+      "category": "Media Trading",
+      "use_case": "Amazon Ads MCP server",
+      "announced_date": "2025-10-01"
+    },
+    {
+      "company": "Dstillery",
+      "protocol": "MCP",
+      "country": "US",
+      "region": "North America",
+      "category": "Data & Identity",
+      "use_case": "MCP server for audience intelligence",
+      "announced_date": "2025-11-01"
+    },
+    {
+      "company": "Burt Intelligence",
+      "protocol": "MCP",
+      "country": "SE",
+      "region": "Europe",
+      "category": "Measurement",
+      "use_case": "MCP server for contextual analytics",
+      "announced_date": "2025-11-01"
+    },
+    {
+      "company": "HyperMindZ",
+      "protocol": "MCP",
+      "country": "US",
+      "region": "North America",
+      "category": "Media Trading",
+      "use_case": "Campaign orchestrator MCP server",
+      "announced_date": "2025-12-01"
+    },
+    {
+      "company": "HyperMindZ",
+      "protocol": "AdCP",
+      "country": "US",
+      "region": "North America",
+      "category": "Media Trading",
+      "use_case": "IAB Deals MCP Server with AdCP support",
+      "announced_date": "2026-01-01"
+    },
+    {
+      "company": "Mixpeek",
+      "protocol": "MCP",
+      "country": "US",
+      "region": "North America",
+      "category": "Creative",
+      "use_case": "MCP server for multimodal content analysis",
+      "announced_date": "2025-12-01"
+    },
+    {
+      "company": "Prebid.org",
+      "protocol": "AdCP",
+      "country": "US",
+      "region": "North America",
+      "category": "Media Trading",
+      "use_case": "Prebid Sales Agent - open source publisher sales automation",
+      "announced_date": "2026-01-15"
+    },
+    {
+      "company": "Prebid.org",
+      "protocol": "MCP",
+      "country": "US",
+      "region": "North America",
+      "category": "Media Trading",
+      "use_case": "Prebid Sales Agent MCP integration",
+      "announced_date": "2026-01-15"
+    },
+    {
+      "company": "Prebid.org",
+      "protocol": "A2A",
+      "country": "US",
+      "region": "North America",
+      "category": "Media Trading",
+      "use_case": "Prebid Sales Agent A2A support",
+      "announced_date": "2026-01-15"
+    },
+    {
+      "company": "Promobase",
+      "protocol": "MCP",
+      "country": "US",
+      "region": "North America",
+      "category": "Media Trading",
+      "use_case": "Unified Ads MCP server",
+      "announced_date": "2026-02-01"
+    },
+    {
+      "company": "Microsoft",
+      "protocol": "A2A",
+      "country": "US",
+      "region": "North America",
+      "category": "Infrastructure",
+      "use_case": "Azure AI Foundry and Copilot Studio A2A support",
+      "announced_date": "2025-05-07"
+    },
+    {
+      "company": "Adobe",
+      "protocol": "A2A",
+      "country": "US",
+      "region": "North America",
+      "category": "Creative",
+      "use_case": "Adobe generative AI agents A2A interoperability",
+      "announced_date": "2025-04-09"
+    },
+    {
+      "company": "ServiceNow",
+      "protocol": "A2A",
+      "country": "US",
+      "region": "North America",
+      "category": "Infrastructure",
+      "use_case": "AI Agent Fabric multi-agent communication",
+      "announced_date": "2025-04-09"
+    },
+    {
+      "company": "Box",
+      "protocol": "A2A",
+      "country": "US",
+      "region": "North America",
+      "category": "Infrastructure",
+      "use_case": "Content management agent interoperability",
+      "announced_date": "2025-04-09"
+    },
+    {
+      "company": "Intuit",
+      "protocol": "A2A",
+      "country": "US",
+      "region": "North America",
+      "category": "Infrastructure",
+      "use_case": "Financial services agent communication",
+      "announced_date": "2025-04-09"
+    },
+    {
+      "company": "PayPal",
+      "protocol": "A2A",
+      "country": "US",
+      "region": "North America",
+      "category": "Infrastructure",
+      "use_case": "Payment agent interoperability",
+      "announced_date": "2025-04-09"
+    },
+    {
+      "company": "Workday",
+      "protocol": "A2A",
+      "country": "US",
+      "region": "North America",
+      "category": "Infrastructure",
+      "use_case": "HR/finance agent communication",
+      "announced_date": "2025-04-09"
+    },
+    {
+      "company": "MongoDB",
+      "protocol": "A2A",
+      "country": "US",
+      "region": "North America",
+      "category": "Infrastructure",
+      "use_case": "Database agent connectivity",
+      "announced_date": "2025-04-09"
+    },
+    {
+      "company": "LangChain",
+      "protocol": "A2A",
+      "country": "US",
+      "region": "North America",
+      "category": "Infrastructure",
+      "use_case": "Agent framework A2A integration",
+      "announced_date": "2025-04-09"
+    },
+    {
+      "company": "Cohere",
+      "protocol": "A2A",
+      "country": "CA",
+      "region": "North America",
+      "category": "Infrastructure",
+      "use_case": "LLM platform A2A support",
+      "announced_date": "2025-04-09"
+    },
+    {
+      "company": "S&P Global",
+      "protocol": "A2A",
+      "country": "US",
+      "region": "North America",
+      "category": "Data & Identity",
+      "use_case": "Inter-agent communication for market intelligence",
+      "announced_date": "2025-06-01"
+    },
+    {
+      "company": "Accenture",
+      "protocol": "A2A",
+      "country": "IE",
+      "region": "Europe",
+      "category": "Infrastructure",
+      "use_case": "Enterprise consulting A2A implementation",
+      "announced_date": "2025-04-09"
+    },
+    {
+      "company": "Deloitte",
+      "protocol": "A2A",
+      "country": "US",
+      "region": "North America",
+      "category": "Infrastructure",
+      "use_case": "Enterprise consulting A2A implementation",
+      "announced_date": "2025-04-09"
+    },
+    {
+      "company": "Capgemini",
+      "protocol": "A2A",
+      "country": "FR",
+      "region": "Europe",
+      "category": "Infrastructure",
+      "use_case": "Enterprise consulting A2A implementation",
+      "announced_date": "2025-04-09"
+    },
+    {
+      "company": "Cognizant",
+      "protocol": "A2A",
+      "country": "US",
+      "region": "North America",
+      "category": "Infrastructure",
+      "use_case": "Enterprise consulting A2A implementation",
+      "announced_date": "2025-04-09"
+    },
+    {
+      "company": "Infosys",
+      "protocol": "A2A",
+      "country": "IN",
+      "region": "Asia Pacific",
+      "category": "Infrastructure",
+      "use_case": "Enterprise consulting A2A implementation",
+      "announced_date": "2025-04-09"
+    },
+    {
+      "company": "TCS",
+      "protocol": "A2A",
+      "country": "IN",
+      "region": "Asia Pacific",
+      "category": "Infrastructure",
+      "use_case": "Enterprise consulting A2A implementation",
+      "announced_date": "2025-04-09"
+    },
+    {
+      "company": "Wipro",
+      "protocol": "A2A",
+      "country": "IN",
+      "region": "Asia Pacific",
+      "category": "Infrastructure",
+      "use_case": "Enterprise consulting A2A implementation",
+      "announced_date": "2025-04-09"
+    },
+    {
+      "company": "HCLTech",
+      "protocol": "A2A",
+      "country": "IN",
+      "region": "Asia Pacific",
+      "category": "Infrastructure",
+      "use_case": "Enterprise consulting A2A implementation",
+      "announced_date": "2025-04-09"
+    },
+    {
+      "company": "Target",
+      "protocol": "MCP",
+      "country": "US",
+      "region": "North America",
+      "category": "Retail Media",
+      "use_case": "Agentic marketing with MCP",
+      "announced_date": "2025-11-01"
+    },
+    {
+      "company": "Canva",
+      "protocol": "MCP",
+      "country": "AU",
+      "region": "Asia Pacific",
+      "category": "Creative",
+      "use_case": "MCP-powered design automation",
+      "announced_date": "2025-11-01"
+    },
+    {
+      "company": "WPP",
+      "protocol": "MCP",
+      "country": "GB",
+      "region": "Europe",
+      "category": "Media Trading",
+      "use_case": "Agentic marketing operations via MCP",
+      "announced_date": "2025-11-01"
+    },
+    {
+      "company": "Mistral",
+      "protocol": "MCP",
+      "country": "FR",
+      "region": "Europe",
+      "category": "Infrastructure",
+      "use_case": "MCP integration in Mistral platform",
+      "announced_date": "2025-12-01"
+    },
+    {
+      "company": "AdSkate",
+      "protocol": "MCP",
+      "country": "US",
+      "region": "North America",
+      "category": "Creative",
+      "use_case": "MCP-powered creative intelligence",
+      "announced_date": "2025-10-01"
+    },
+    {
+      "company": "MiQ",
+      "protocol": "AdCP",
+      "country": "GB",
+      "region": "Europe",
+      "category": "Media Trading",
+      "use_case": "Running AdCP tests for programmatic buying",
+      "announced_date": "2026-01-01"
+    },
+    {
+      "company": "Teqblaze",
+      "protocol": "AdCP",
+      "country": "US",
+      "region": "North America",
+      "category": "Infrastructure",
+      "use_case": "AdCP integration with ~12 publishers",
+      "announced_date": "2026-01-01"
+    },
+    {
+      "company": "Amnet/Dentsu",
+      "protocol": "MCP",
+      "country": "FR",
+      "region": "Europe",
+      "category": "Media Trading",
+      "use_case": "First French agentic campaign, MCP integration",
+      "announced_date": "2026-03-15"
+    },
+    {
+      "company": "PubMatic",
+      "protocol": "ARTF",
+      "country": "US",
+      "region": "North America",
+      "category": "Media Trading",
+      "use_case": "ARTF and AdCP complementary roles",
+      "announced_date": "2026-02-01"
+    }
+  ],
+  "articles": [
+    {
+      "title": "AI Is Moving Fast. The Law, Not So Much",
+      "source": "AdExchanger",
+      "url": "https://www.adexchanger.com/data-privacy-roundup/ai-is-moving-fast-the-law-not-so-much/",
+      "category": "Data & Identity",
+      "protocols": [],
+      "published": "2026-04-01T05:00:33"
+    },
+    {
+      "title": "Duplicative Data Doesn’t Pay; Investors Soften On Software",
+      "source": "AdExchanger",
+      "url": "https://www.adexchanger.com/daily-news-roundup/wednesday-01042026/",
+      "category": "Media Trading",
+      "protocols": [],
+      "published": "2026-04-01T04:03:37"
+    },
+    {
+      "title": "Digiday+ Research: How Dow Jones, Forbes, The Guardian and other publisher revenue streams are shifting in 2026",
+      "source": "Digiday",
+      "url": "https://digiday.com/media/digiday-research-how-dow-jones-forbes-the-guardian-and-other-publisher-revenue-streams-are-shifting-in-2026/?utm_campaign=digidaydis&utm_medium=rss&utm_source=general-rss",
+      "category": null,
+      "protocols": [],
+      "published": "2026-04-01T04:01:00"
+    },
+    {
+      "title": "‘Predictability has become a luxury’: As the Iran war drags on, ad markets are starting to sweat",
+      "source": "Digiday",
+      "url": "https://digiday.com/marketing/predictability-has-become-a-luxury-as-the-iran-war-drags-on-ad-markets-are-starting-to-sweat/?utm_campaign=digidaydis&utm_medium=rss&utm_source=general-rss",
+      "category": null,
+      "protocols": [],
+      "published": "2026-04-01T04:01:00"
+    },
+    {
+      "title": "Publishers see double-digit growth from TTD’s OpenPath, but volatility remains",
+      "source": "Digiday",
+      "url": "https://digiday.com/media/publishers-see-double-digit-growth-from-ttds-openpath-but-volatility-remains/?utm_campaign=digidaydis&utm_medium=rss&utm_source=general-rss",
+      "category": "Infrastructure",
+      "protocols": [],
+      "published": "2026-04-01T04:01:00"
+    },
+    {
+      "title": "Future of TV Briefing: What publishers have to offer creators",
+      "source": "Digiday",
+      "url": "https://digiday.com/future-of-tv/future-of-tv-briefing-what-publishers-have-to-offer-creators/?utm_campaign=digidaydis&utm_medium=rss&utm_source=general-rss",
+      "category": null,
+      "protocols": [],
+      "published": "2026-04-01T04:01:00"
+    },
+    {
+      "title": "Walmart-Vizio’s CTV measurement faces incrementality hurdle",
+      "source": "Digiday",
+      "url": "https://digiday.com/marketing/walmart-vizios-ctv-measurement-faces-incrementality-hurdle/?utm_campaign=digidaydis&utm_medium=rss&utm_source=general-rss",
+      "category": "Measurement",
+      "protocols": [],
+      "published": "2026-04-01T04:01:00"
+    },
+    {
+      "title": "How E.l.f. Beauty is using AI to alleviate the workload of its workforce",
+      "source": "Digiday",
+      "url": "https://digiday.com/marketing/how-e-l-f-beauty-is-using-ai-to-alleviate-the-workload-of-its-workforce/?utm_campaign=digidaydis&utm_medium=rss&utm_source=general-rss",
+      "category": null,
+      "protocols": [],
+      "published": "2026-04-01T04:01:00"
+    },
+    {
+      "title": "Mercor says it was hit by cyberattack tied to compromise of open-source LiteLLM project",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/03/31/mercor-says-it-was-hit-by-cyberattack-tied-to-compromise-of-open-source-litellm-project/",
+      "category": "Infrastructure",
+      "protocols": [],
+      "published": "2026-04-01T01:42:59"
+    },
+    {
+      "title": "Anthropic is having a month",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/03/31/anthropic-is-having-a-month/",
+      "category": null,
+      "protocols": [],
+      "published": "2026-03-31T23:58:26"
+    },
+    {
+      "title": "Salesforce announces an AI-heavy makeover for Slack, with 30 new features",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/03/31/salesforce-announces-an-ai-heavy-makeover-for-slack-with-30-new-features/",
+      "category": null,
+      "protocols": [],
+      "published": "2026-03-31T22:46:25"
+    },
+    {
+      "title": "OpenAI, not yet public, raises $3B from retail investors in monster $122B fund raise",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/03/31/openai-not-yet-public-raises-3b-from-retail-investors-in-monster-122b-fund-raise/",
+      "category": null,
+      "protocols": [],
+      "published": "2026-03-31T21:25:04"
+    },
+    {
+      "title": "How brands, agencies are operationalizing AI as the tech matures",
+      "source": "Marketing Dive",
+      "url": "https://www.marketingdive.com/news/how-brands-agencies-are-operationalizing-ai-as-the-tech-matures/816241/",
+      "category": null,
+      "protocols": [],
+      "published": "2026-03-31T20:14:00"
+    },
+    {
+      "title": "Yupp shuts down after raising $33M from a16z crypto’s Chris Dixon",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/03/31/yupp-ai-shuts-down-33m-a16z-crypto-chris-dixon/",
+      "category": null,
+      "protocols": [],
+      "published": "2026-03-31T20:01:07"
+    },
+    {
+      "title": "SMX Now: Learn how brands must adapt for AI-driven search",
+      "source": "Search Engine Land",
+      "url": "https://searchengineland.com/smx-now-learn-how-brands-must-adapt-for-ai-driven-search-471869",
+      "category": null,
+      "protocols": [],
+      "published": "2026-03-31T19:24:58"
+    },
+    {
+      "title": "YouTube adds AI creator matching and ad formats to its partnerships platform",
+      "source": "Search Engine Land",
+      "url": "https://searchengineland.com/youtube-adds-ai-creator-matching-and-new-ad-formats-to-its-partnerships-platform-473149",
+      "category": "Creative",
+      "protocols": [],
+      "published": "2026-03-31T18:50:02"
+    },
+    {
+      "title": "AI search engines cite Reddit, YouTube, and LinkedIn most: Study",
+      "source": "Search Engine Land",
+      "url": "https://searchengineland.com/ai-search-engines-cite-reddit-youtube-and-linkedin-most-study-473138",
+      "category": null,
+      "protocols": [],
+      "published": "2026-03-31T18:36:38"
+    },
+    {
+      "title": "News Outlets Share Coverage Plans for Historic Artemis II Launch",
+      "source": "Ad Age",
+      "url": "https://www.adweek.com/tvnewser/news-outlets-share-coverage-plans-for-historic-artemis-ii-launch/",
+      "category": null,
+      "protocols": [],
+      "published": "2026-03-31T17:44:15"
+    },
+    {
+      "title": "Alexa+ gets new food ordering experiences with Uber Eats and Grubhub",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/03/31/alexa-plus-new-food-ordering-experiences-with-uber-eats-and-grubhub/",
+      "category": null,
+      "protocols": [],
+      "published": "2026-03-31T17:41:35"
+    },
+    {
+      "title": "Google Gemini may adapt AI answers to match user tone: Report",
+      "source": "Search Engine Land",
+      "url": "https://searchengineland.com/google-gemini-tone-emotions-report-473118",
+      "category": null,
+      "protocols": [],
+      "published": "2026-03-31T17:25:45"
+    },
+    {
+      "title": "Google expands Merchant Center loyalty features to 14 countries and AI surfaces",
+      "source": "Search Engine Land",
+      "url": "https://searchengineland.com/google-expands-merchant-center-loyalty-features-to-14-countries-and-ai-surfaces-473122",
+      "category": null,
+      "protocols": [],
+      "published": "2026-03-31T17:17:19"
+    },
+    {
+      "title": "Google explains how crawling works in 2026",
+      "source": "Search Engine Land",
+      "url": "https://searchengineland.com/google-explains-how-crawling-works-in-2026-473110",
+      "category": null,
+      "protocols": [],
+      "published": "2026-03-31T16:52:18"
+    },
+    {
+      "title": "The Trade Desk Rivals Swoop In on the Heels of Publicis, Omnicom Auditing Drama",
+      "source": "Ad Age",
+      "url": "https://www.adweek.com/programmatic/the-trade-desk-rivals-swoop-in-on-the-heels-of-publicis-omnicom-auditing-drama/",
+      "category": "Media Trading",
+      "protocols": [],
+      "published": "2026-03-31T16:17:14"
+    },
+    {
+      "title": "Top Shelf: How Patrón Stays Premium With Craft and Conviction in a Digital World",
+      "source": "Ad Age",
+      "url": "https://www.adweek.com/brand-marketing/top-shelf-how-patron-stays-premium-with-craft-and-conviction-in-a-digital-world/",
+      "category": null,
+      "protocols": [],
+      "published": "2026-03-31T15:44:13"
+    },
+    {
+      "title": "59% of SEO jobs are now senior-level roles: Study",
+      "source": "Search Engine Land",
+      "url": "https://searchengineland.com/seo-job-listings-senior-level-roles-study-473088",
+      "category": null,
+      "protocols": [],
+      "published": "2026-03-31T15:43:44"
+    },
+    {
+      "title": "Our Lego Agency&#8217;s Jennifer Berry on Building Connected Commerce Beyond Channels",
+      "source": "Ad Age",
+      "url": "https://www.adweek.com/brand-marketing/our-lego-agencys-jennifer-berry-on-building-connected-commerce-beyond-channels/",
+      "category": null,
+      "protocols": [],
+      "published": "2026-03-31T15:26:48"
+    },
+    {
+      "title": "Mike’s Hard Lemonade looks to win over Gen Z with animated lemons",
+      "source": "Marketing Dive",
+      "url": "https://www.marketingdive.com/news/mikes-hard-lemonade-looks-to-win-over-gen-z-with-animated-lemons/816212/",
+      "category": null,
+      "protocols": [],
+      "published": "2026-03-31T15:21:00"
+    },
+    {
+      "title": "Axeptio Wins the Tech Prize at the CFNEWS South-East External Growth Awards, France",
+      "source": "ExchangeWire",
+      "url": "https://www.exchangewire.com/blog/2026/03/31/axeptio-wins-the-tech-prize-at-the-cfnews-south-east-external-growth-awards-france/",
+      "category": null,
+      "protocols": [],
+      "published": "2026-03-31T15:00:00"
+    },
+    {
+      "title": "Technical SEO for generative search: Optimizing for AI agents",
+      "source": "Search Engine Land",
+      "url": "https://searchengineland.com/technical-seo-generative-search-optimizing-ai-agents-473039",
+      "category": "Infrastructure",
+      "protocols": [],
+      "published": "2026-03-31T15:00:00"
+    },
+    {
+      "title": "Nomadic raises $8.4 million to wrangle the data pouring off autonomous vehicles",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/03/31/nomadic-raises-8-4-million-to-wrangle-the-data-pouring-off-avs/",
+      "category": null,
+      "protocols": [],
+      "published": "2026-03-31T15:00:00"
+    },
+    {
+      "title": "Hightouch streamlines the ad ecosystem with data partnerships",
+      "source": "MarTech",
+      "url": "https://martech.org/hightouch-streamlines-the-ad-ecosystem-with-data-partnerships/",
+      "category": "Data & Identity",
+      "protocols": [],
+      "published": "2026-03-31T14:10:42"
+    },
+    {
+      "title": "‘Letting Cam Be Cam’: How Brands Can Work With Athlete Creators Like Cam Newton",
+      "source": "Ad Age",
+      "url": "https://www.adweek.com/media/how-brands-can-work-with-athlete-creators-like-cam-newton/",
+      "category": null,
+      "protocols": [],
+      "published": "2026-03-31T14:04:58"
+    },
+    {
+      "title": "The push layer returns: Why ‘publish and wait’ is half a strategy",
+      "source": "Search Engine Land",
+      "url": "https://searchengineland.com/the-push-layer-returns-why-publish-and-wait-is-half-a-strategy-472941",
+      "category": null,
+      "protocols": [],
+      "published": "2026-03-31T14:00:00"
+    },
+    {
+      "title": "Exclusive: Runway launches $10M fund, Builders program to support early-stage AI startups",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/03/31/exclusive-runway-launches-10m-fund-builders-program-to-support-early-stage-ai-startups/",
+      "category": null,
+      "protocols": [],
+      "published": "2026-03-31T14:00:00"
+    },
+    {
+      "title": "Fanta reaches out to gamers with Xbox anniversary collaboration",
+      "source": "Marketing Dive",
+      "url": "https://www.marketingdive.com/news/fanta-reaches-out-to-gamers-with-xbox-anniversary-collaboration/816161/",
+      "category": null,
+      "protocols": [],
+      "published": "2026-03-31T13:56:00"
+    },
+    {
+      "title": "ChatGPT enables location sharing for more precise local responses",
+      "source": "Search Engine Land",
+      "url": "https://searchengineland.com/chatgpt-enables-location-sharing-for-more-precise-local-responses-473060",
+      "category": null,
+      "protocols": [],
+      "published": "2026-03-31T13:43:39"
+    },
+    {
+      "title": "Why digital audio is a must-have for your retail media plan",
+      "source": "MarTech",
+      "url": "https://martech.org/why-digital-audio-is-a-must-have-for-your-retail-media-plan/",
+      "category": "Media Trading",
+      "protocols": [],
+      "published": "2026-03-31T13:13:00"
+    },
+    {
+      "title": "With its new app store, Ring bets on AI to go beyond home security",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/03/31/ring-app-store-bets-on-ai-to-go-beyond-home-security/",
+      "category": null,
+      "protocols": [],
+      "published": "2026-03-31T13:00:00"
+    },
+    {
+      "title": "Building an AI competitive edge through strategy and governance",
+      "source": "MarTech",
+      "url": "https://martech.org/building-an-ai-competitive-edge-through-strategy-and-governance/",
+      "category": null,
+      "protocols": [],
+      "published": "2026-03-31T12:56:00"
+    },
+    {
+      "title": "Reclaiming The Original Promise Of Programmatic",
+      "source": "AdExchanger",
+      "url": "https://www.adexchanger.com/content-studio/reclaiming-the-original-promise-of-programmatic/",
+      "category": "Media Trading",
+      "protocols": [],
+      "published": "2026-03-31T12:00:28"
+    },
+    {
+      "title": "Programmatic Video’s Waste Problem Is A Growth Lever – If We Choose To Pull It",
+      "source": "AdExchanger",
+      "url": "https://www.adexchanger.com/content-studio/programmatic-videos-waste-problem-is-a-growth-lever-if-we-choose-to-pull-it/",
+      "category": "Media Trading",
+      "protocols": [],
+      "published": "2026-03-31T12:00:14"
+    },
+    {
+      "title": "Regulating Social Media: Where do we go from here?",
+      "source": "ExchangeWire",
+      "url": "https://www.exchangewire.com/blog/2026/03/31/regulating-social-media-where-do-we-go-from-here/",
+      "category": null,
+      "protocols": [],
+      "published": "2026-03-31T12:00:00"
+    },
+    {
+      "title": "Albertsons on its ChatGPT ads test and push for retail media transparency",
+      "source": "Marketing Dive",
+      "url": "https://www.marketingdive.com/news/albertsons-on-its-chatgpt-ads-test-and-push-for-retail-media-transparency/815983/",
+      "category": "Measurement",
+      "protocols": [],
+      "published": "2026-03-31T12:00:00"
+    },
+    {
+      "title": "Axeptio remporte le Prix Tech aux Grands Prix CFNEWS de la Croissance Externe Sud-Est",
+      "source": "ExchangeWire",
+      "url": "https://www.exchangewire.com/blog/2026/03/31/axeptio-remporte-le-prix-tech-aux-grands-prix-cfnews-de-la-croissance-externe-sud-est/",
+      "category": null,
+      "protocols": [],
+      "published": "2026-03-31T11:52:01"
+    },
+    {
+      "title": "Virtual Vanguard Recap: David Sable",
+      "source": "Ad Age",
+      "url": "https://www.adweek.com/brand-marketing/virtual-vanguard-recap-david-sable/",
+      "category": null,
+      "protocols": [],
+      "published": "2026-03-31T11:23:51"
+    },
+    {
+      "title": "EXCLUSIVE: Yahoo Moves Downmarket With DSP Performance Push",
+      "source": "Ad Age",
+      "url": "https://www.adweek.com/agencies/exclusive-yahoo-moves-downmarket-with-dsp-performance-push/",
+      "category": "Media Trading",
+      "protocols": [],
+      "published": "2026-03-31T11:06:50"
+    },
+    {
+      "title": "Why Scripps Is All In On Women’s Sports",
+      "source": "AdExchanger",
+      "url": "https://www.adexchanger.com/adexchanger-talks/why-scripps-is-all-in-on-womens-sports/",
+      "category": null,
+      "protocols": [],
+      "published": "2026-03-31T10:00:39"
+    },
+    {
+      "title": "Ad Tech Briefing: Criteo makes self-serve push with GO, targeting SMB growth",
+      "source": "Digiday",
+      "url": "https://digiday.com/media-buying/ad-tech-briefing-criteo-makes-self-serve-push-with-go-targeting-smb-growth/?utm_campaign=digidaydis&utm_medium=rss&utm_source=general-rss",
+      "category": null,
+      "protocols": [],
+      "published": "2026-03-31T10:00:00"
+    },
+    {
+      "title": "Verizon Casts Heated Rivalry&#8217;s Connor Storrie in Cabin Thriller Ad With a Twist Ending",
+      "source": "Ad Age",
+      "url": "https://www.adweek.com/creativity/verizon-casts-heated-rivalry-star-connor-storrie-in-cabin-thriller-ad/",
+      "category": null,
+      "protocols": [],
+      "published": "2026-03-31T09:00:00"
+    },
+    {
+      "title": "Ray Media Advisory Wants To Fix Agency-Client Relationships Before They Break",
+      "source": "Ad Age",
+      "url": "https://www.adweek.com/agencies/ray-media-advisory-wants-to-fix-agency-client-relationships-before-they-break/",
+      "category": null,
+      "protocols": [],
+      "published": "2026-03-31T09:00:00"
+    }
+  ],
+  "generated_at": "2026-04-01T22:01:20.628Z"
 }
