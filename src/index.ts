@@ -6,6 +6,7 @@ import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js"
 import { SSEServerTransport } from "@modelcontextprotocol/sdk/server/sse.js";
 import { createServer as createHttpServer } from "node:http";
 import type { IncomingMessage, ServerResponse } from "node:http";
+import { handleSnapshotRequest } from "./api/snapshot-handler.js";
 
 const args = process.argv.slice(2);
 const useSSE = args.includes("--sse");
@@ -23,10 +24,9 @@ if (useSSE) {
   const httpServer = createHttpServer(async (req: IncomingMessage, res: ServerResponse) => {
     const url = new URL(req.url ?? "/", `http://localhost:${port}`);
 
-    // Stub: /api/snapshot (Task 9 will implement this)
-    if (req.method === "GET" && url.pathname === "/api/snapshot") {
-      res.writeHead(501, { "Content-Type": "application/json" });
-      res.end(JSON.stringify({ error: "Not implemented yet" }));
+    // Snapshot API
+    if (url.pathname === "/api/snapshot") {
+      handleSnapshotRequest(req, res);
       return;
     }
 
