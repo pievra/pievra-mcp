@@ -64,8 +64,8 @@ if (useSSE) {
     res.end(JSON.stringify({ error: "Not found" }));
   });
 
-  httpServer.listen(port, () => {
-    console.error(`Pievra MCP server (SSE) listening on port ${port}`);
+  httpServer.listen(port, "127.0.0.1", () => {
+    console.error(`Pievra MCP server (SSE) listening on 127.0.0.1:${port}`);
   });
 } else {
   // Stdio mode: use LocalProvider (loads bundled snapshot or fetches from pievra.com)
