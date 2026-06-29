@@ -84,3 +84,10 @@ npx vitest run                   # tests (43 passing)
 | A2A | a2aproject/A2A | - | Stable |
 | ARTF | IABTechLab/agentic-rtb-framework | - | Final |
 | Agentic Audiences | IABTechLab/agentic-audiences | - | Draft |
+
+## License
+
+**Source-available.** Copyright (c) 2026 Pievra. You may connect to and use the
+Pievra MCP service. You may not fork, rebrand, or operate a competing service
+from this code. Full terms in [LICENSE](LICENSE) (Business Source License 1.1;
+converts to Apache-2.0 on 2030-06-29).
