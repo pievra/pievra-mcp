@@ -11,6 +11,7 @@ import { handleSnapshotRequest } from "./api/snapshot-handler.js";
 const args = process.argv.slice(2);
 const useSSE = args.includes("--sse");
 const portIndex = args.indexOf("--port");
+const publicMessagePath = process.env.MCP_PUBLIC_MESSAGE_PATH ?? "/message";
 const port = portIndex !== -1 ? parseInt(args[portIndex + 1] ?? "3004", 10) : 3004;
 
 if (useSSE) {
@@ -32,7 +33,10 @@ if (useSSE) {
 
     // SSE: GET / opens a new SSE connection
     if (req.method === "GET" && url.pathname === "/") {
-      const transport = new SSEServerTransport("/message", res);
+      // The address the client is told to POST to. Behind a reverse proxy that mounts this
+      // server under a prefix (pievra.com/mcp/), it must carry that prefix, or the client
+      // posts to the site root and every tool call fails.
+      const transport = new SSEServerTransport(publicMessagePath, res);
       transports.set(transport.sessionId, transport);
 
       transport.onclose = () => {
