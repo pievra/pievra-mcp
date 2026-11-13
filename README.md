@@ -1,6 +1,6 @@
 # Pievra MCP Server
 
-Cross-protocol intelligence for agentic advertising. An MCP server exposing 7 tools that AI agents use to discover, evaluate, and assemble advertising technology stacks across AdCP, MCP, A2A, ARTF, and Agentic Audiences.
+Cross-protocol intelligence for agentic advertising. An MCP server exposing 11 tools that AI agents use to discover, evaluate, and assemble advertising technology stacks across AdCP, MCP, A2A, ARTF, and Agentic Audiences.
 
 **Live at [pievra.com/mcp](https://pievra.com/news/mcp)**
 
@@ -35,6 +35,10 @@ npx @pievra/mcp-server
 | `get_compatibility` | Check interoperability between any two protocols |
 | `recommend_stack` | Get recommended agents and protocols for a campaign goal |
 | `get_market_news` | Latest agentic advertising news from 8 publications |
+| `supply_list_markets` | Markets in the Pievra Supply Atlas, with tracked and graded sites and apps |
+| `supply_lookup_site` | A site's supply path grade and the ad systems with a confirmed direct route to it |
+| `supply_check_seller` | Whether an ad system or seller account is authorised in a domain's ads.txt, and whether sellers.json confirms it |
+| `supply_buying_routes` | The shortest list of ad systems that reaches a market's graded sites or apps directly |
 
 ## Example
 
