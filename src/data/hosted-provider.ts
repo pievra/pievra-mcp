@@ -11,6 +11,12 @@ const MATURITY_MAP: Record<string, string> = {
   "Agentic Audiences": "Draft",
 };
 
+/** Integer inside [min, max]; anything else (NaN, negative, fraction, missing) falls back safely. */
+export function clampInt(value: number | undefined, fallback: number, min: number, max: number): number {
+  if (value === undefined || !Number.isFinite(value)) return fallback;
+  return Math.min(max, Math.max(min, Math.trunc(value)));
+}
+
 export class HostedProvider implements DataProvider {
   private analyticsDb: Database.Database;
   private newsDb: Database.Database;
@@ -112,8 +118,7 @@ export class HostedProvider implements DataProvider {
     const countRow = this.analyticsDb.prepare(countSql).get(...params) as { cnt: number };
     const total = countRow.cnt;
 
-    const rawLimit = opts?.limit ?? 20;
-    const limit = Math.min(rawLimit, 100);
+    const limit = clampInt(opts?.limit, 20, 1, 100);
     const dataSql = `SELECT * FROM deployments ${where} LIMIT ?`;
     const rows = this.analyticsDb.prepare(dataSql).all(...params, limit) as Record<string, unknown>[];
 
@@ -212,12 +217,13 @@ export class HostedProvider implements DataProvider {
       params.push(opts.category);
     }
     if (opts?.days) {
-      conditions.push(`published >= date('now', '-${Number(opts.days)} days')`);
+      // Bound and pass as a parameter: no number from a caller is written into the SQL text.
+      conditions.push(`published >= date('now', ?)`);
+      params.push(`-${clampInt(opts.days, 7, 1, 365)} days`);
     }
 
     const where = conditions.length > 0 ? `WHERE ${conditions.join(" AND ")}` : "";
-    const rawLimit = opts?.limit ?? 10;
-    const limit = Math.min(rawLimit, 50);
+    const limit = clampInt(opts?.limit, 10, 1, 50);
     const sql = `SELECT * FROM articles ${where} ORDER BY published DESC LIMIT ?`;
     const rows = this.newsDb.prepare(sql).all(...params, limit) as Record<string, unknown>[];
 

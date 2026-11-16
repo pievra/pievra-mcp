@@ -1,4 +1,5 @@
 import { createRequire } from "module";
+import { fetchCapped } from "../net.js";
 import { Agent, Article, DataProvider, Deployment, ProtocolMetrics, SnapshotData } from "./types.js";
 
 const DEFAULT_SNAPSHOT_URL = "https://pievra.com/mcp/api/snapshot";
@@ -14,15 +15,16 @@ export class LocalProvider implements DataProvider {
     const url = snapshotUrl ?? DEFAULT_SNAPSHOT_URL;
 
     try {
-      const controller = new AbortController();
-      const timeout = setTimeout(() => controller.abort(), 3000);
-      const response = await fetch(url, { signal: controller.signal });
-      clearTimeout(timeout);
-
+      // Deadline of 3 s for headers and body together, and a size cap: a slow or oversized
+      // answer falls back to the bundled snapshot instead of blocking the start.
+      const response = await fetchCapped(url, { timeoutMs: 3000, maxBytes: 8_000_000 });
       if (!response.ok) {
         throw new Error(`HTTP ${response.status}`);
       }
-      const data = (await response.json()) as SnapshotData;
+      const data = JSON.parse(response.text) as SnapshotData;
+      if (!data || !Array.isArray(data.agents) || !Array.isArray(data.deployments) || !Array.isArray(data.metrics) || !Array.isArray(data.articles)) {
+        throw new Error("unexpected snapshot shape");
+      }
       return new LocalProvider(data);
     } catch {
       // Fall back to bundled snapshot
@@ -93,7 +95,7 @@ export class LocalProvider implements DataProvider {
 
     const total = results.length;
     const rawLimit = opts?.limit ?? 20;
-    const limit = Math.min(rawLimit, 100);
+    const limit = Number.isFinite(rawLimit) ? Math.min(Math.max(Math.trunc(rawLimit), 1), 100) : 20;
     return { deployments: results.slice(0, limit), total };
   }
 
@@ -131,7 +133,7 @@ export class LocalProvider implements DataProvider {
     }
 
     const rawLimit = opts?.limit ?? 10;
-    const limit = Math.min(rawLimit, 50);
+    const limit = Number.isFinite(rawLimit) ? Math.min(Math.max(Math.trunc(rawLimit), 1), 50) : 10;
     return results.slice(0, limit);
   }
 
